@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-O2",
+                "-o",
+                "AudioVisualizer.exe",
+                "AudioVisualizer.cpp",
+                "AudioCapture.cpp",
+                "-lole32",
+                "-lwinmm",
+                "-loleaut32",
+                "-luuid",
+                "-lmmdevapi",
+                "-lksuser",
+                "-lavrt",
+                "-DWIN32_LEAN_AND_MEAN",
+                "-DUNICODE",
+                "-D_UNICODE",
+                "-std=c++17"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
